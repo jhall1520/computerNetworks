@@ -1,13 +1,16 @@
+def decorators(*args, **kwargs) :
+	def wrapper_function(func):
+		func()
+		print(args[::-1])
+	return wrapper_function
 
-def decorator_function(string1, string2, string3) :
-	reverse1 = string1[::-1]
-	reverse2 = string2[::-1]
-	reverse3 = string3[::-1]
-	return reverse1, reverse2, reverse3
+
+def reverse_strings():
+	print("Reversing order!")
 
 string1 = input("Enter a string: ")
 string2 = input("Enter a string: ")
 string3 = input("Enter a string: ")
 
-reverse_strings = decorator_function(string1, string2, string3)
-print(reverse_strings)
+decorators(string1,string2,string3)(reverse_strings)
+
