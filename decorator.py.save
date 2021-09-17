@@ -1,0 +1,18 @@
+
+def decorator_function(function) :
+	reverse1 = args[0][::-1]
+	reverse2 = args[1][::-1]
+	reverse3 = args[2][::-1]
+	return reverse1, reverse2, reverse3
+
+def reverse_strings(string1, string2, string3):
+	print(string1)
+	print(string2)
+	print(string3)
+
+string1 = input("Enter a string: ")
+string2 = input("Enter a string: ")
+string3 = input("Enter a string: ")
+
+print(decorator_function(reverse_strings(string1, string2, string3)))
+print(reverse())
